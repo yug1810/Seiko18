@@ -1,0 +1,445 @@
+<html> 
+<head> 
+    
+    <title>SEIKO</title> 
+    <style> 
+        .menubar{ 
+          display: flex;        
+               justify-content: center;           
+                 align-items: center;          
+                    background-color:darkgreen;          
+                       padding: 40px 30px;     
+                            position: relative;        
+                                 border-radius:16px; 
+        } 
+ 
+        .menus{ 
+          display: flex;           
+            gap: 40px; 
+        } 
+ 
+        .menus a{
+          color: white;
+                text-decoration:none;   
+                font-size: 16px;   
+                 margin:0 10px; 
+        } 
+       .left{            
+         color:white;             
+        font-size:20px; 
+                    font-weight: bold;
+                                 position: absolute; 
+                                             top:1.5px;   
+                                                       left:20px; 
+ 
+        } 
+     
+        .image-cards{       
+                display: flex;       
+                    text-align: center;   
+                            justify-content: space-around;     
+                                  place-items: center;   
+                                          height: 100%;  
+                                                   width: 100%;        
+                                                      padding: 25px; 
+          
+        } 
+         
+        .image-cards .card {      
+           border: 1px solid black;   
+               border-radius: 10%;  
+                    box-shadow: 3px 3px 3px grey;   
+                        height: 85%;  
+                             width: 30%;  
+        } 
+          
+         
+        .image-cards .card img{        
+               height: 250px;     
+                       width: 250px;   
+                                 border: radius 50%;     
+                                         margin-top: 20px; 
+ 
+        } 
+        .image-cards .card h1{     
+                  margin-top: 30px; 
+        } 
+        .image-cards .card p{       
+                margin-top: 40px;      
+                       font-size: small; 
+        } 
+                 .slider {   
+                      position: relative;   
+                          width: 600px;  
+                               height: 250px;
+                                overflow: hidden;
+                                 margin: 20px auto; 
+                                 border-radius: 10px; 
+}
+    .slides {    
+         display: block;   
+             transition: transform 0.5s ease-in-out; 
+    } 
+ 
+    .slide{    
+         width: 600px;   
+             height: 300px; 
+    } 
+ 
+    .slide img {   
+          width:100%;    
+             height: 100%;   
+                 object-fit: cover; 
+       
+    } 
+     
+    .prev , .next {
+      position: absolute; 
+      top: 50%;
+      transform: translateY(-50%); background: rgba(0,0,0,0.5); 
+      color: white;
+      border: none; 
+padding: 10px;
+cursor: pointer; 
+font-size: 18px; 
+    } 
+ 
+    .prev {
+      left: 10px; 
+    } 
+ 
+    .next {
+      right: 10px; 
+    } 
+  
+    .footer {      
+       background: linear-gradient( to right, rgba(214,125,20,0.8)); 
+       color: rgba(44,44,44,1); 
+       padding: 40px 20px; 
+       text-align: center; 
+    } 
+ 
+    .footer-social{ 
+       margin-bottom: 30px; 
+    } 
+ 
+.footer-social p{ font-size: 20px;
+   font-weight: bold;
+    margin-bottom: 10px; 
+}
+    .social-icons a { 
+      margin: 0 10px;  
+       display: inline-block; 
+    } 
+ 
+    .social-icons img { 
+      width: 28px; 
+       height: 28px; 
+    } 
+ 
+    .footer-columns { display: flex; 
+       justify-content: center; 
+         gap: 60px; 
+           flex-wrap: wrap; 
+             margin-bottom: 20px; 
+    } 
+ 
+    .footer-columns div {      
+       text-align: left;  
+         } 
+.footer-columns h4 { margin-bottom: 10px; 
+  font-size: 16px;
+   text-decoration: underline; 
+}
+ 
+    .footer-columns a {   
+          display: block;    
+             color: rgba(44,44,44,1);     
+               text-decoration: none;  
+                    margin: 5px 0;  
+                         font-size: 14px; 
+    } 
+ 
+    .footer-columns a:hover {  
+           text-decoration: underline; 
+    } 
+ 
+    .footer-logo {    
+        margin-top: 20px; 
+    } 
+ 
+    .footer-logo img {   
+        width: 40px; 
+    } 
+ 
+   .footer-bottom {   
+    margin-top: 20px;
+     font-size: 14px; 
+     }
+     .section { 
+       text-align: center; 
+  margin: 30px 0;  
+   font-family: Arial, sans-serif; 
+}  
+.section h5 {   font-size: 28px; 
+    font-weight: bold;
+       color: rgba (51,51,51,1);
+          border-bottom: 2px solid; 
+            display: inline-block;  
+             padding-bottom: 5px; 
+} 
+.section h6 {   
+  font-size: 28px;
+     font-weight: bold; 
+       color: #333;
+          border-bottom: 2px solid #000;   
+          display: inline-block; 
+            padding-bottom: 5px; 
+}       
+       
+    </style> 
+</head> 
+<body> 
+<div class="menubar"> 
+    <div class="left"><h1 class="name">SEIKO</h1></div> 
+    <div class="menus"> 
+                 
+                <a href="#">HOME</a> 
+                <a href="#">CATEGORIES</a> 
+                <a href="#">PERSONALISATION</a> 
+            </div> 
+            </div> 
+     
+             
+     <div class="slider"> 
+    <div class="slides"> 
+         
+      <div class="slide"><img src="6.png" alt="image 1" ></div> 
+      <div class="slide"><img src="6.png" alt="image 2"></div> 
+       
+       
+    
+    </div> 
+ 
+    <button class="prev" onclick="prevSlide()">❮</button> 
+    <button class="next" onclick="nextSlide()">❯</button> 
+  </div> 
+ 
+   
+ 
+<script> 
+  let currentIndex = 0; 
+    const slides = document. querySelectorAll ('. slide'); 
+        const totalSlides = slides.length; 
+ 
+    function showSlide(index) {       const slideContainer = document.querySelector('.slides');   
+        if (index >= totalSlides) currentIndex = 0;  
+             else if (index < 0) currentIndex = totalSlides - 1;   
+                 else currentIndex = index; 
+ 
+      slideContainer.style.transform = `translateX (-${currentIndex * 600}px)`; 
+    } 
+ 
+    function prevSlide() {     
+        showSlide(currentIndex - 1); 
+    } 
+ 
+    function nextSlide() {     
+        showSlide(currentIndex + 1); 
+    } 
+   
+       </script>  
+       <div class="SECTION">  
+  <h5>Men's Watches</h5>  
+</div>  
+  </div>   
+<div class="image-cards"> 
+ <div class="card"><center> 
+            <img src="1.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $160</h1> 
+            <p> Seiko Diva Smartwatch with Diamond Cut dial, Glossy Metallic Finish, 
+AMOLED Display</p> 
+           </center></div> 
+            <div class="card"><center> 
+            <img src="OIP.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $120</h1> 
+            <p> Seiko Quad Call 1.81" Display, 160+Hrs Battery Life, Metallic Build, in-Built Games, 
+</p> 
+           </center></div> 
+            <div class="card"><center> 
+            <img src="2.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $10</h1> 
+            <p> Seiko Pulse 2 Max 1.85" Display, Bluetooth Calling, 10 Days Battery, Smartwatch for Men and Women (Jet Black) </p> 
+           </center></div> 
+ 
+            
+         
+     
+</div> 
+<div class="image-cards"> 
+    <div class="card"><center> 
+            <img src="9.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $180</h1> 
+            <p>Seiko Analog Stainless Steel Blue Dial Silver Band Men's Watch-
+SSK003K1</center></div> 
+            <div class="card"><center> 
+            <img src="5.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $120</h1> 
+            <p>Seiko Analogue Men's Stainless-Steel Watch (Black Dial Yellow Colored Strap) </p> 
+           </center></div> 
+            <div class="card"><center> 
+            <img src="7.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $80</h1> 
+            <p>SEIKO Stainless Steel Men's Analog Blue Dial Men's Watch-Srpl03K1, Band Color Silver</p> 
+           </center></div> 
+ 
+            
+         
+  </div> 
+<div class="image-cards"> 
+<div class="card"><center> 
+<img src="12.jpg" alt=""> 
+<h1>Seiko</h1> 
+            <h1>Price: $80</h1> 
+            <p>Seiko Stainless Steel Analog Blue Dial Men's Watch-
+Snkp17K1</center></div> 
+            <div class="card"><center> 
+            <img src="13.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $50</h1> 
+            <p>Seiko Analog Stainless Steel Blue Dial Silver Band Men's Watch-
+SSK003K1</p> 
+           </center></div> 
+            <div class="card"><center> 
+            <img src="14.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $60</h1> 
+            <p>Seiko Silicone Analog Black Dial Men Watch-Srpd76K1, Black Band</p> 
+           </center></div> 
+ 
+            
+     
+        </div> 
+         <div class="SECTION">  
+    <h6>Women's Watches</h6>  
+  </div>  
+          <div class="image-cards"> 
+            <div class="card"><center> 
+<img src="wom1.jpg" alt=""> 
+<h1>Seiko</h1> 
+<h1>Price: $60</h1> 
+            <p>Seiko Stainless Steel Analogue Blue Dial Women Watch-Sre003K1, Band color-Silver</p> 
+           </center></div> 
+            <div class="card"><center> 
+            <img src="wom2.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $80</h1> 
+            <p>Seiko Stainless Steel Women Sur529P1 Ladies' Analogue Watch Quartz with Sapphire Glass, Silver</p> 
+           </center></div> 
+            <div class="card"><center> 
+            <img src="wom3.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $70</h1> 
+            <p> Seiko Metal Analog Gold Dial Women Watch-Srlz86P1, Band colorGold</center></div> 
+ 
+            
+         
+     
+        </div> 
+         
+             <div class="image-cards"> 
+      <div class="card"><center> 
+   <img src="wom4.jpg" alt=""> 
+<h1>Seiko</h1> 
+<h1>Price: $60</h1> 
+<p>Seiko Women's Analog Quartz Watch with Stainless Steel Strap SUR615P1</p> 
+           </center></div> 
+            <div class="card"><center> 
+            <img src="wom5.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $80</h1> 
+            <p>Seiko Women's Analog Quartz Watch with Stainless Steel Strap 
+SUR616P1</p> 
+           </center></div> 
+            <div class="card"><center> 
+            <img src="wom6.jpg" alt=""> 
+            <h1>Seiko</h1> 
+            <h1>Price: $70</h1> 
+            <p> Seiko Stainless Steel Velatura Analog White Dial Women Watch-Sxdf49P1, Band color-Silver</center></div> 
+ 
+            
+         
+     
+        </div> 
+ 
+         
+<div class="footer"> 
+<div class="footer-social"> 
+<p>Let's get social</p> 
+<div class="social-icons"> 
+        <a href="#"><img src="facebook.webp" alt="Facebook"></a> 
+        <a href="#"><img src="x.png" alt="X (Twitter)"></a> 
+        <a href="#"><img src="insta.png" alt="Instagram"></a> 
+        <a href="#"><img src="utube.png" alt="YouTube"></a> 
+        <a href="#"><img src="pinterset.jpg" alt="Pinterest"></a> 
+        <a href="#"><img src="tiktok.png" alt="TikTok"></a> 
+      </div> 
+    </div> 
+ 
+     
+    <div class="footer-columns"> 
+      <div> 
+        <h4>SHOP BY GENDER</h4> 
+        <a href="#">Smart Watches for Men</a> 
+        <a href="#">Smart Watches for Women</a> 
+        <a href="#">Smart Watches for Kids</a> 
+      </div> 
+      <div> 
+        <h4>SHOP BY PRICE</h4> 
+        <a href="#">Smart Watches Under $100</a> 
+        <a href="#">Smart Watches Under $50</a> 
+   <a href="#">Smart Watches Under $46</a> 
+  <a href="#">Smart Watches Under $40</a> 
+</div> 
+<div> 
+  <h4>INFORMATION</h4> 
+  <a href="#">Privacy policy</a> 
+        <a href="#">Term & Conditions </a> 
+        <a href="#">Warranty policy</a> 
+        <a href="#">FAQ</a> 
+        <a href="#">CONTACT US </a> 
+        <a href="#">Warranty policy</a> 
+         
+         
+      </div> 
+       <div> 
+        <h4>CONTACT US</h4> 
+        <a href="#">1800-266-0123</a> 
+        <a href="#">Customercare@seiko.in</a> 
+        <a href="#">Help & contact</a> 
+        <a href="#">corporate</a> 
+        <a href="#">Track order</a>        
+         
+      </div> 
+    </div> 
+ 
+    <div class="footer-logo"> 
+      <img src="seiko.png" alt="Clock Logo"> 
+   </div> 
+   <div class="footer-bottom"> 
+ @ 2025 Seiko company. All Rights Reserved 
+</div> 
+  </div> 
+ 
+             
+ 
+                </div> 
+     
+</body> 
+</html> 
